@@ -1,0 +1,66 @@
+@use 'index' as *;
+
+.contact {
+  background-color: $color-gray-lighter;
+  text-align: center;
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: $spacing-md;
+    flex-wrap: wrap;
+    margin-top: $spacing-lg;
+    
+    @media (max-width: $breakpoint-sm) {
+      flex-direction: column;
+      gap: $spacing-sm;
+    }
+  }
+  
+  .social-link {
+    display: flex;
+    align-items: center;
+    padding: $spacing-sm $spacing-md;
+    border: 1px solid $color-gray-dark;
+    border-radius: 2px;
+    transition: all $transition-fast;
+    
+    i {
+      font-size: $font-size-lg;
+      margin-right: $spacing-sm;
+    }
+    
+    span {
+      font-family: $font-primary;
+      font-size: $font-size-xs;
+      font-weight: $font-weight-semibold;
+      letter-spacing: 0.05em;
+    }
+    
+    &:hover, &:focus {
+      background-color: $color-gray-dark;
+      color: $color-white;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba($color-black, 0.1);
+    }
+  }
+}
+
+.footer {
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, 
+      transparent, 
+      $color-gray-light, 
+      transparent
+    );
+  }
+}

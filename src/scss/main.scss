@@ -1,0 +1,57 @@
+// 変数とユーティリティのインポート
+@use 'index' as *;
+
+// レイアウトとコンポーネントのインポート
+@use 'layout';
+@use 'profile';
+@use 'works';
+@use 'footer';
+
+// アニメーション
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// アニメーション用クラス
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  
+  &.visible {
+    animation: fadeIn 0.8s forwards;
+  }
+}
+
+// 追加のグローバルスタイル
+::selection {
+  background-color: rgba($color-accent, 0.2);
+  color: $color-accent;
+}
+
+// グリッドパターン背景（クールな雰囲気を強調）
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba($color-black, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba($color-black, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}

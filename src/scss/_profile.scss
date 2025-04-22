@@ -1,0 +1,79 @@
+@use 'index' as *;
+
+.profile {
+  background-color: $color-gray-lighter;
+  
+  .profile-content {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+    
+    @media (min-width: $breakpoint-md) {
+      flex-direction: row;
+    }
+  }
+  
+  .profile-image {
+    flex: 1;
+    
+    .image-placeholder {
+      height: 350px;
+      border-radius: 2px;
+      box-shadow: 0 10px 30px rgba($color-black, 0.1);
+      transition: transform $transition-normal;
+      
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+  }
+  
+  .profile-text {
+    flex: 1;
+    
+    h3 {
+      margin-top: $spacing-md;
+      font-size: $font-size-md;
+      position: relative;
+      padding-bottom: $spacing-xs;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 30px;
+        height: 1px;
+        background-color: $color-accent;
+      }
+      
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+    
+    p {
+      margin-top: $spacing-sm;
+      color: $color-gray-medium;
+      line-height: 1.8;
+    }
+  }
+  
+  .skill-list {
+    list-style: none;
+    margin-top: $spacing-sm;
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-xs;
+    
+    li {
+      background-color: $color-white;
+      padding: $spacing-xs $spacing-sm;
+      border-radius: 2px;
+      font-size: $font-size-xs;
+      font-weight: $font-weight-semibold;
+      display: inline-block;
+      border: 1px solid $color-gray-light;
+    }
+  }
+}

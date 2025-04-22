@@ -1,0 +1,55 @@
+// カラー変数
+$color-black: #000000;
+$color-white: #ffffff;
+$color-gray-dark: #222222;
+$color-gray-medium: #555555;
+$color-gray-light: #aaaaaa;
+$color-gray-lighter: #f8f8f8;
+$color-gray-darker: #111111;
+$color-accent: #0077cc; // 青系アクセント（最小限に使用）
+
+// フォント
+$font-primary: 'Montserrat', sans-serif;
+$font-secondary: 'Noto Sans JP', sans-serif;
+
+// フォントウェイト
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// フォントサイズ
+$font-size-xxs: 0.75rem;  // 12px
+$font-size-xs: 0.875rem;  // 14px
+$font-size-sm: 1rem;      // 16px
+$font-size-md: 1.25rem;   // 20px
+$font-size-lg: 1.5rem;    // 24px
+$font-size-xl: 2rem;      // 32px
+$font-size-xxl: 3rem;     // 48px
+$font-size-hero: 4.5rem;  // 72px
+
+// ブレークポイント
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// コンテナ幅
+$container-width: 1140px;
+
+// 余白
+$spacing-xs: 0.5rem;   // 8px
+$spacing-sm: 1rem;     // 16px
+$spacing-md: 2rem;     // 32px
+$spacing-lg: 3rem;     // 48px
+$spacing-xl: 4rem;     // 64px
+
+// アニメーション
+$transition-fast: 0.2s ease;
+$transition-normal: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+// z-index
+$z-index-base: 1;
+$z-index-header: 100;
+$z-index-modal: 1000;
